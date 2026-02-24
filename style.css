@@ -1,8 +1,15 @@
+html {
+  color: black;
+}
+
 body {
   font-family: sans-serif;
   max-width: 40em;
   line-height: 1.4;
   margin: 3em auto;
+  & > section:not(:first-child) {
+    margin: 40em auto 2em;
+  }
 }
 
 h2 {
