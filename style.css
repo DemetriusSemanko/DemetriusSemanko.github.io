@@ -1,15 +1,15 @@
-html {
-  color: black;
-}
-
 body {
   font-family: sans-serif;
   max-width: 40em;
-  line-height: 1.4;
-  margin: 3em auto;
-  & > section:not(:first-child) {
-    margin: 40em auto 2em;
-  }
+  line-height: 1.5;
+  margin: 0em auto;
+  background-color: white;
+  box-shadow: 0 0 10px 2px black;
+  padding: 0 3em;
+}
+
+:is(header, main) > section:not(:first-child), footer {
+    margin: 4em auto 2em;
 }
 
 h2 {
@@ -17,4 +17,12 @@ h2 {
   width: max-content;
   padding: 5px 10px;
   border-radius: 10px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+html {
+  background-color: lightcoral;
 }
