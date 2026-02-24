@@ -1,9 +1,14 @@
+body {
+  font-family: sans-serif;
+  margin: auto;
+}
 h2 {
   border: black 1.5pt solid;
   width: max-content;
   padding: 5px 10px;
   border-radius: 10px;
 }
-p {
-  width: 50%;
+p,
+header {
+  max-width: 40em;
 }
