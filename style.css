@@ -1,14 +1,13 @@
 body {
   font-family: sans-serif;
-  margin: auto;
+  max-width: 40em;
+  line-height: 1.4;
+  margin: 3em auto;
 }
+
 h2 {
   border: black 1.5pt solid;
   width: max-content;
   padding: 5px 10px;
   border-radius: 10px;
-}
-p,
-header {
-  max-width: 40em;
 }
