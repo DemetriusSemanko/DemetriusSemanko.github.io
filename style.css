@@ -26,3 +26,19 @@ h1 {
 html {
   background-color: lightcoral;
 }
+
+nav {
+  /*display: flex;
+  flex-direction: column; */
+  position: fixed;
+  top: 0;
+  left: 10px;
+  z-index: 1;
+  & > a {
+    width: max-content;
+    background-color: white;
+    border: black 1.5pt solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+}
