@@ -44,3 +44,14 @@ nav {
     padding-left: 20px;
   }
 }
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  & > p {
+    border: black 1.5pt solid;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
