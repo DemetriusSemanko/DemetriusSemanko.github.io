@@ -51,6 +51,7 @@ nav {
     font-weight: bold;
     &.titular-navbar-tab {
       background-color: var(--electric-blue);
+      box-shadow: 0 0 5px 0.25px inset black;
     }
   }
 }
