@@ -48,6 +48,7 @@ nav {
     color: black;
     margin: 4px;
     text-decoration: none;
+    font-weight: bold;
     &.titular-navbar-tab {
       background-color: var(--electric-blue);
     }
