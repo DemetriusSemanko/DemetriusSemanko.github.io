@@ -1,5 +1,7 @@
 :root {
   --electric-blue: #80f0f0;
+  --tetradic-green: #80F080; /* Green-ish */
+  --tetradic-blue: #8080F0; /* Blue-ish */
 }
 body {
   font-family: sans-serif;
@@ -37,22 +39,22 @@ nav {
   flex-direction: column;
   position: fixed;
   left: -15px;
-  top: 0;
+  top: 4px;
   z-index: 1;
   & > a {
-    width: max-content;
-    background-color: white;
-    border: black 1.5pt solid;
-    border-radius: 5px;
-    padding: 5px 10px 5px 20px;
+    background-color: var(--tetradic-green);
     color: black;
-    margin: 4px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 0 5px 0.25px black;
+    width: max-content;
+    border: black 1.5pt solid;
+    border-radius: 5px;
+    padding: 5px 15px 5px 20px;
+    margin: 4px;
+    box-shadow: 2px 0px 5px 0.25px black;
     &.titular-navbar-tab {
-      background-color: var(--electric-blue);
-      box-shadow: 0 0 5px 0.25px inset black;
+      box-shadow: -2px 0 5px 0.25px inset black;
+      background-color: var(--tetradic-blue);
     }
   }
 }
