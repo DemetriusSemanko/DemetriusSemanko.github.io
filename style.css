@@ -1,7 +1,7 @@
 :root {
   --electric-blue: #80f0f0;
-  --tetradic-green: #80F080; /* Green-ish */
-  --tetradic-blue: #8080F0; /* Blue-ish */
+  --tetradic-green: #80f080; /* Green-ish */
+  --tetradic-blue: #8080f0; /* Blue-ish */
 }
 body {
   font-family: sans-serif;
@@ -17,6 +17,13 @@ body {
 footer,
 h3 {
   margin: 4em auto 2em;
+}
+
+footer {
+  padding-bottom: 2em;
+}
+header {
+  padding-top: 2em;
 }
 
 h2 {
