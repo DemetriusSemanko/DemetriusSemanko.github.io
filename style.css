@@ -76,3 +76,16 @@ nav {
     border-radius: 10px;
   }
 }
+
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.date-posted {
+  display: grid;
+  justify-content: end;
+  font-weight: bold;
+}
+.author {
+  font-style: italic;
+}
