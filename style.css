@@ -70,13 +70,20 @@ nav {
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  & > p {
+  border-top: solid black;
+  
+  h2 {
+    border: none;
+    text-decoration: underline;
+  }
+  & > section {
     border: black 1.5pt solid;
-    margin: 5px;
+    margin-top: 16pt;
     padding: 5px;
     border-radius: 10px;
+  }
+  p {
+    padding: 10px;
   }
 }
 
