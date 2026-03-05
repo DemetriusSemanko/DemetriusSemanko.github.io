@@ -3,6 +3,7 @@
   --tetradic-green: #80f080; /* Green-ish */
   --tetradic-blue: #8080f0; /* Blue-ish */
 }
+
 body {
   font-family: sans-serif;
   max-width: 40em;
@@ -14,6 +15,7 @@ body {
 }
 
 :is(header, main) > section:not(:first-child),
+article > section,
 footer,
 h3 {
   margin: 4em auto 2em;
@@ -22,11 +24,12 @@ h3 {
 footer {
   padding-bottom: 2em;
 }
+
 header {
   padding-top: 2em;
 }
 
-h2 {
+:not(article) > h2 {
   border: black 1.5pt solid;
   width: max-content;
   padding: 5px 10px;
@@ -81,11 +84,13 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .date-posted {
   display: grid;
   justify-content: end;
   font-weight: bold;
 }
+
 .author {
   font-style: italic;
 }
