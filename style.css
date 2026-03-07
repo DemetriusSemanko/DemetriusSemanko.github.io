@@ -71,11 +71,10 @@ nav {
 
 .projects {
   border-top: solid black;
-  
   h2 {
     border: none;
-    text-decoration: underline;
   }
+  
   & > section {
     border: black 1.5pt solid;
     margin-top: 16pt;
