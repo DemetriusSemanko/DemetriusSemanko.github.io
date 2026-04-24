@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 const pageTitle = "Home Page";
 const ident = {
@@ -15,23 +15,21 @@ const ident = {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <Navigation />
   </head>
   <body>
-    <header>
-      <h1>{pageTitle}</h1>
-      <span>Hello!</span>
-      <br>
-      <span>You can call me {ident.firstName}</span>
-      <p>
-        Welcome to my personal site. I believe a personal site gives me the
-        control we as a society have lost to mainstream platforms. Despite this
-        vast control, I still do not know what to put here 😁. This site is very
-        much
-        <em>a work in progress</em>, but I hope to develop it into something of
-        which I will be proud.
-      </p>
-    </header>
+    <Header />
+    <h1>{pageTitle}</h1>
+    <span>Hello!</span>
+    <br>
+    <span>You can call me {ident.firstName}</span>
+    <p>
+      Welcome to my personal site. I believe a personal site gives me the
+      control we as a society have lost to mainstream platforms. Despite this
+      vast control, I still do not know what to put here 😁. This site is very
+      much
+      <em>a work in progress</em>, but I hope to develop it into something of
+      which I will be proud.
+    </p>
   </body>
   <Footer />
 </html>
