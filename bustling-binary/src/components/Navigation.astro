@@ -1,0 +1,9 @@
+---
+const routes = {
+  Home: "/",
+  About: "/about/",
+};
+---
+<nav>
+  {Object.entries(routes).map(([route, path]) => <a href={path}>{route}</a>)}
+</nav>
