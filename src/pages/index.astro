@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Home Page";
+const pageTitle = "Home";
 const ident = {
   firstName: "Demetrius",
 };
 ---
-<BaseLayout {pageTitle}>
+<BaseLayout pageTitle={pageTitle}>
   <span>Hello!</span>
   <br>
   <span>You can call me {ident.firstName}</span>
