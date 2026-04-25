@@ -43,30 +43,59 @@ h1 {
 html {
   background-color: lightcoral;
 }
-
 nav {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: -15px;
-  top: 4px;
-  z-index: 1;
-  & > a {
-    background-color: var(--tetradic-green);
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    width: max-content;
-    border: black 1.5pt solid;
-    border-radius: 5px;
-    padding: 5px 15px 5px 20px;
-    margin: 4px;
-    box-shadow: 2px 0px 5px 0.25px black;
-    &.titular-navbar-tab {
-      box-shadow: -2px 0 5px 0.25px inset black;
-      background-color: var(--tetradic-blue);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+nav a {
+  /* Small screen nav style*/
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background-color: var(--tetradic-green);
+  margin: 4px;
+  border: black 1.5pt solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 0px 2.5px 2.5px 0.25px black;
+
+  &.titular-navbar-tab {
+    box-shadow: 0px -2.5px 5px 0.25px inset black;
+    background-color: var(--tetradic-blue);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  /* Large screen nav style */
+  nav {
+    justify-content: unset;
+    align-items: unset;
+    flex-direction: column;
+    position: fixed;
+    left: -15px;
+    top: 4px;
+    z-index: 1;
+    & > a {
+      width: max-content;
+      border: black 1.5pt solid;
+      border-radius: 5px;
+      padding: 5px 15px 5px 20px;
+      box-shadow: 2px 0px 5px 0.25px black;
+      &.titular-navbar-tab {
+        box-shadow: -2px 0 5px 0.25px inset black;
+        background-color: var(--tetradic-blue);
+      }
     }
   }
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: white;
 }
 
 .projects {
@@ -74,7 +103,7 @@ nav {
   h2 {
     border: none;
   }
-  
+
   & > section {
     border: black 1.5pt solid;
     margin-top: 16pt;
