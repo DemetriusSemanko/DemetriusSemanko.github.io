@@ -1,10 +1,8 @@
 ---
-const routes = {
-  Home: "/",
-  About: "/about/",
-  Blog: "/blog/",
-};
+import NavItem from "./NavItem.astro";
 ---
 <nav>
-  {Object.entries(routes).map(([route, path]) => <a href={path}>{route}</a>)}
+  <NavItem href="/" label="Home" />
+  <NavItem href="/about" label="About" />
+  <NavItem href="/blog" label="Blog" />
 </nav>

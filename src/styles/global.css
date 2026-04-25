@@ -93,11 +93,6 @@ nav a {
   }
 }
 
-nav a:hover,
-nav a:focus {
-  background-color: white;
-}
-
 .projects {
   border-top: solid black;
   h2 {
