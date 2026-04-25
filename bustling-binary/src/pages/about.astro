@@ -1,123 +1,105 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
+<BaseLayout {pageTitle}>
+  <p>
+    Learn a little about me by reading this page!
+  </p>
+  <!-- whoami -->
+  <section>
+    <h2>whoami</h2>
     <p>
-      Learn a little about me by reading this page!
+      My name is Demetrius S and I am a college student in my 20s pursuing a
+      Bachelor of Science in Computer Science. Of course, a computer science
+      degree isn't all that I am!
     </p>
-    <main>
-      <!-- whoami -->
+  </section>
+  <!-- What do I do? -->
+  <section>
+    <h2>What do I do?</h2>
+    <section>
+      <p>
+        Professionally, I work for my University's IT Help Desk. I like my job,
+        the people I work with, and the problems I solve. I would be very happy
+        to work in either the IT or the SWE field, as both fields have problems
+        I like solving. Maybe one day I can do both!
+      </p>
+      <p>
+        I also participate in some clubs at my University, and, when time
+        allows, I enjoy quite a few hobbies outside of my extracurriculars.
+      </p>
+    </section>
+    <section>
+      <h3>University Clubs</h3>
       <section>
-        <h2>whoami</h2>
+        <h4>Cybersecurity Club, Vice President</h4>
         <p>
-          My name is Demetrius S and I am a college student in my 20s pursuing a
-          Bachelor of Science in Computer Science. Of course, a computer science
-          degree isn't all that I am!
+          So far, my role entails planning and facilitating meetings. The task I
+          enjoy most, however, is to listen and learn. Our club President has a
+          lot of informative things to teach us!
         </p>
       </section>
-      <!-- What do I do? -->
       <section>
-        <h2>What do I do?</h2>
-        <section>
-          <p>
-            Professionally, I work for my University's IT Help Desk. I like my
-            job, the people I work with, and the problems I solve. I would be
-            very happy to work in either the IT or the SWE field, as both fields
-            have problems I like solving. Maybe one day I can do both!
-          </p>
-          <p>
-            I also participate in some clubs at my University, and, when time
-            allows, I enjoy quite a few hobbies outside of my extracurriculars.
-          </p>
-        </section>
-        <section>
-          <h3>University Clubs</h3>
-          <section>
-            <h4>Cybersecurity Club, Vice President</h4>
-            <p>
-              So far, my role entails planning and facilitating meetings. The
-              task I enjoy most, however, is to listen and learn. Our club
-              President has a lot of informative things to teach us!
-            </p>
-          </section>
-          <section>
-            <h4>Computer Science Club, Treasurer</h4>
-            <p>
-              I took on this role recently due to a vacancy. I've lots to learn.
-              My friend, who acts as Treasurer for other clubs, is teaching me.
-            </p>
-          </section>
-          <section>
-            <h4>Competitive Programming Club, Member</h4>
-            <p>
-              I have gone to and competed in a few competitions in coordination
-              with the club. We've attended PACISE, ICPC, and others. It is an
-              amazing experience to solve a problem under stress!
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>Hobbies</h3>
-          <section>
-            <h4>Music: Curating and Listening</h4>
-            <p>
-              While I don't make music, I certainly enjoy finding new music.
-              Either from online or from other media like movies, music follows
-              me everywhere. One of the things about the Internet of which I'm
-              most grateful is the exposure to music I receive. Music in many
-              languages, even when not understood by me, still sounds great.
-            </p>
-            <p>
-              I've fallen in love with many genres throughout my life. One
-              consistent genre "type" has been electronic music. My life with EM
-              started with dubstep, but I soon grew out of the genre and moved
-              on to other things for a time. In late 2022, I stumbled upon a
-              drum and bass musician named LTJ Bukem. Because of him and others,
-              I enjoy jungle / drum and bass.
-            </p>
-            <p>
-              More conventional genres such as rock, rap, R&amp;B, and pop have
-              also enjoyed a special spot in my life. From the era of Jimi
-              Hendrix to the decade of Nirvana, rock rocks! Also, rap and pop in
-              not just English but also other languages (such as French rap or
-              Russian pop) are things I return to periodically. I must say that
-              having just a little bit of curiosity when listening to music in
-              other languages really helps you learn even basic words and
-              phrases for fun.
-            </p>
-          </section>
-        </section>
-      </section>
-      <!-- Friends -->
-      <section>
-        <h2>Friends!</h2>
+        <h4>Computer Science Club, Treasurer</h4>
         <p>
-          I have amazing friends who teach me so much. The world, defined only
-          through my own lens, looks very small. These friends have made my
-          world so much larger.
+          I took on this role recently due to a vacancy. I've lots to learn. My
+          friend, who acts as Treasurer for other clubs, is teaching me.
         </p>
       </section>
-      <!-- 
+      <section>
+        <h4>Competitive Programming Club, Member</h4>
+        <p>
+          I have gone to and competed in a few competitions in coordination with
+          the club. We've attended PACISE, ICPC, and others. It is an amazing
+          experience to solve a problem under stress!
+        </p>
+      </section>
+    </section>
+    <section>
+      <h3>Hobbies</h3>
+      <section>
+        <h4>Music: Curating and Listening</h4>
+        <p>
+          While I don't make music, I certainly enjoy finding new music. Either
+          from online or from other media like movies, music follows me
+          everywhere. One of the things about the Internet of which I'm most
+          grateful is the exposure to music I receive. Music in many languages,
+          even when not understood by me, still sounds great.
+        </p>
+        <p>
+          I've fallen in love with many genres throughout my life. One
+          consistent genre "type" has been electronic music. My life with EM
+          started with dubstep, but I soon grew out of the genre and moved on to
+          other things for a time. In late 2022, I stumbled upon a drum and bass
+          musician named LTJ Bukem. Because of him and others, I enjoy jungle /
+          drum and bass.
+        </p>
+        <p>
+          More conventional genres such as rock, rap, R&amp;B, and pop have also
+          enjoyed a special spot in my life. From the era of Jimi Hendrix to the
+          decade of Nirvana, rock rocks! Also, rap and pop in not just English
+          but also other languages (such as French rap or Russian pop) are
+          things I return to periodically. I must say that having just a little
+          bit of curiosity when listening to music in other languages really
+          helps you learn even basic words and phrases for fun.
+        </p>
+      </section>
+    </section>
+  </section>
+  <!-- Friends -->
+  <section>
+    <h2>Friends!</h2>
+    <p>
+      I have amazing friends who teach me so much. The world, defined only
+      through my own lens, looks very small. These friends have made my world so
+      much larger.
+    </p>
+  </section>
+  <!-- 
         TODO: 
         Software that I use
         Games I like
         Things I like to do
       -->
-    </main>
-  </body>
-  <Footer />
-</html>
+</BaseLayout>
