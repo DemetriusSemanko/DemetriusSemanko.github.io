@@ -1,29 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Demetrius S' Projects</title>
-  </head>
-  <body>
-    <header>
-      <h1>Demetrius S' Projects</h1>
-      <p>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Projects";
+---
+<BaseLayout {pageTitle}>
+<p>
         My projects are hosted on GitHub. For a VCS, I started with git (using
         GitHub Desktop 💩). I transitioned to interacting with git solely
         through the command line. I won't pretend I know how to use git like
         crazy. I've since been introduced to (and really enjoy) jujutsu
         (hereafter referred to as "jj").
-      </p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/projects/" class="titular-navbar-tab">Projects</a>
-        <a href="/blog/">Blog</a>
-      </nav>
-    </header>
-    <main>
-      <section class="projects">
+</p>
+
+<section class="projects">
         <section>
           <a href="https://github.com/DemetriusSemanko/Blackjack">
           <h2>Blackjack Game</h2>
@@ -36,8 +24,5 @@
             recreate this attempt with both text- and GUI-based interaction.
           </p>
         </section>
-      </section>
-    </main>
-    <footer><section>&copy; 2026 Demetrius</section></footer>
-  </body>
-</html>
+</section>
+<BaseLayout />
