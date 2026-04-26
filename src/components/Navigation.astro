@@ -9,16 +9,18 @@ import NavItem from "./NavItem.astro";
 </nav>
 
 <script>
-  /*
-   * Stolen from https://gist.github.com/leabs/11e9f20a5580982428824148f62eb2a0
-   * Thanks, Leabs!
-   */
-  const nav = document.querySelector("nav");
-  const navLinks = nav.querySelectorAll("a");
-  const currentURL = window.location.href;
-  navLinks.forEach((link) => {
-    if (link.href === currentURL) {
-      link.classList.add("titular-navbar-tab");
-    }
+  document.addEventListener("astro:page-load", () => {
+    /*
+     * Stolen from https://gist.github.com/leabs/11e9f20a5580982428824148f62eb2a0
+     * Thanks, Leabs!
+     */
+    const nav = document.querySelector("nav");
+    const navLinks = nav.querySelectorAll("a");
+    const currentURL = window.location.href;
+    navLinks.forEach((link) => {
+      if (link.href === currentURL) {
+        link.classList.add("titular-navbar-tab");
+      }
+    });
   });
 </script>
