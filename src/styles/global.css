@@ -64,7 +64,7 @@ nav a {
   box-shadow: 0px 2.5px 2.5px 0.25px black;
 
   &.titular-navbar-tab {
-    box-shadow: 0px -2.5px 5px 0.25px inset black;
+    box-shadow: 0px 2.5px 2.5px 0.25px inset black;
     background-color: var(--tetradic-blue);
   }
 }
