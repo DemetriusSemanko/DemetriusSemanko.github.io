@@ -1,30 +1,26 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPostPreview from "../../components/BlogPostPreview.astro";
+const allPosts = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true }),
+);
 const pageTitle = "Blog";
 ---
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout {pageTitle}>
   <p>
     A blog may or may not help me in my life journey. I think it will help only
     because articulating my thoughts and ideas has brought me clarity,
     introspection, and reformation.
   </p>
-  <article>
-    <h2>Duck Day 2026</h2>
-    <div class="article-header">
-      <address class="author">
-        <a href="mailto:demetrius@demsem.dev">Demetrius Semanko</a>
-      </address>
-      <time class="date-posted" datetime="2026-03-03">2026-03-03</time>
-    </div>
-    <section>
-      <p>
-        When programming, we try to develop
-        <span class="italic">something</span>, but we also develop
-        <span class="italic">problems</span>. We try our best to fix the
-        problem, but we find ourselves struggling. Who or what can we turn to?
-      </p>
-      <em>A duck! 🦆</em>
-    </section>
-    <a href="/blog/duck_day_2026">Read more...</a>
-  </article>
+
+  {allPosts.map((post: any) => (
+    <li>
+      <BlogPostPreview
+        href={post.url}
+        title={post.frontmatter.title}
+        pubDate={post.frontmatter.pubDate.slice(0, 10)}
+        desc={post.frontmatter.description}
+      />
+    </li>
+  ))}
 </BaseLayout>
