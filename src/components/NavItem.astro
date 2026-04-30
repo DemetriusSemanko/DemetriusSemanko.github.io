@@ -1,6 +1,13 @@
 ---
 const { href, label } = Astro.props;
-const callerUrl = new URL(Astro.url.pathname, import.meta.env.SITE).href;
-const tabUrl = new URL(href, import.meta.env.SITE).href;
+/*
+Thank you, bwc9876, for helping me figure the `isActive` stuff out! :-)
+*/
+const isActive = href === "/"
+  ? Astro.url.pathname === "/"
+  : Astro.url.pathname.startsWith(href);
 ---
-<a {href} class={callerUrl === tabUrl ? "titular-navbar-tab" : ""}>{label}</a>
+<a
+  {href}
+  class={isActive ? "titular-navbar-tab" : undefined}
+>{label}</a>
