@@ -1,7 +1,10 @@
 :root {
-  --electric-blue: #80f0f0;
-  --tetradic-green: #80f080; /* Green-ish */
-  --tetradic-blue: #8080f0; /* Blue-ish */
+  --text: #250307;
+  --background: #fdf7f8;
+  --primary: #a65c60;
+  --secondary: #aad0b4;
+  --accent: #7eb1b8;
+  color: var(--text);
 }
 
 body {
@@ -10,7 +13,7 @@ body {
   line-height: 1.5;
   margin: 0em auto;
   background-color: white;
-  box-shadow: 0 0 10px 2px black;
+  box-shadow: 0 0 10px 0px #00000067;
   padding: 0 3em;
 }
 
@@ -41,7 +44,8 @@ h1 {
 }
 
 html {
-  background-color: lightcoral;
+  background-color: var(--background);
+  scrollbar-gutter: stable;
 }
 nav {
   width: 100%;
@@ -55,8 +59,8 @@ nav a {
   /* Small screen nav style*/
   text-decoration: none;
   font-weight: bold;
-  color: black;
-  background-color: var(--tetradic-green);
+  color: white;
+  background-color: var(--primary);
   margin: 4px;
   border: black 1.5pt solid;
   border-radius: 5px;
@@ -65,7 +69,7 @@ nav a {
 
   &.titular-navbar-tab {
     box-shadow: 0px 2.5px 2.5px 0.25px inset black;
-    background-color: var(--tetradic-blue);
+    background-color: var(--secondary);
   }
 }
 
@@ -87,7 +91,8 @@ nav a {
       box-shadow: 2px 0px 5px 0.25px black;
       &.titular-navbar-tab {
         box-shadow: -2px 0 5px 0.25px inset black;
-        background-color: var(--tetradic-blue);
+        background-color: var(--secondary);
+        color: black;
       }
     }
   }
