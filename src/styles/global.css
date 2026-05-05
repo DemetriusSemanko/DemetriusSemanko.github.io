@@ -1,10 +1,35 @@
+/* realtimecolors.com is really awesome! */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #260307;
+    --background: #fdf7f8;
+    --primary: #a65e60;
+    --secondary: #a9d0b3;
+    --accent: #7fb4b8;
+    --body: #fff;
+    --shadow: #00000067;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fcd9dd;
+    --background: #080203;
+    --primary: #a1595b;
+    --secondary: #2f5639;
+    --accent: #477b80;
+    --body: #111;
+    /* --shadow: #ffffff67;*/
+    --shadow: #0000;
+  }
+  :not(nav) > a {
+    color: lightskyblue;
+    &:visited {
+      color: #af238d;
+    }
+  }
+}
+
 :root {
-  --accent: #7eb1b8;
-  --background: #fdf7f8;
-  --text: #250307;
-  --primary: #a65c60;
-  --secondary: #aad0b4;
-  --shadow67: #00000067;
   color: var(--text);
 }
 
@@ -18,8 +43,9 @@ header {
 }
 
 body {
-  background-color: white;
-  box-shadow: 0 0 10px 0px var(--shadow67);
+  background-color: var(--body);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 1px 10px 0 var(--shadow);
   font-family: sans-serif;
   line-height: 1.5;
   margin: 0em auto;
@@ -43,7 +69,7 @@ footer {
 }
 
 :not(article) > h2 {
-  border: black 1.5pt solid;
+  border: var(--accent) 1.5pt solid;
   border-radius: 10px;
   padding: 5px 10px;
   width: max-content;
@@ -55,7 +81,7 @@ nav {
   width: 100%;
   & > a {
     background-color: var(--primary);
-    border: var(--shadow67) 1.5pt solid;
+    border: var(--shadow) 1.5pt solid;
     border-radius: 5px;
     color: white;
     font-weight: bold;
@@ -76,11 +102,11 @@ nav {
   justify-content: center;
   margin-bottom: 5px;
   & > a {
-    box-shadow: 0px 2.5px 2.5px 0.25px var(--shadow67);
+    box-shadow: 0px 2.5px 2.5px 0.25px var(--shadow);
     padding-left: 10px;
     padding-right: 10px;
     &.titular-navbar-tab {
-      box-shadow: 0px 2.5px 2.5px 0.25px inset var(--shadow67);
+      box-shadow: 0px 2.5px 2.5px 0.25px inset var(--shadow);
     }
   }
 }
@@ -95,25 +121,24 @@ nav {
     position: fixed;
     z-index: -1;
     & > a {
-      box-shadow: 2px 0px 5px 0.25px var(--shadow67);
+      box-shadow: 2px 0px 5px 0.25px var(--shadow);
       padding-left: 20px;
       padding-right: 15px;
       width: max-content;
       &.titular-navbar-tab {
-        box-shadow: -2px 0 5px 0.25px inset var(--shadow67);
+        box-shadow: -2px 0 5px 0.25px inset var(--shadow);
       }
     }
   }
 }
 
 .projects {
-  border-top: solid black;
   h2 {
     border: none;
   }
 
   & > section {
-    border: black 1.5pt solid;
+    border: var(--accent) 1.5pt solid;
     border-radius: 10px;
     margin-top: 16pt;
     padding: 5px;
@@ -140,7 +165,7 @@ nav {
 }
 
 article {
-  border: solid black;
+  border: solid var(--accent);
   border-left-style: none;
   border-right-style: none;
   padding-bottom: 1em;
