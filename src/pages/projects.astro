@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Project from "../components/Project.astro";
 const pageTitle = "Projects";
 ---
 <BaseLayout {pageTitle}>
@@ -10,17 +11,11 @@ const pageTitle = "Projects";
     since been introduced to (and really enjoy) jujutsu (hereafter referred to
     as "jj").
   </p>
-
-  <section class="projects">
-    <section>
-      <a href="https://github.com/DemetriusSemanko/Blackjack">
-        <h2>Blackjack Game</h2>
-      </a>
-      <p>
-        I tried my best to recreate the game of blackjack. While I originally
-        took a crack at it in Java, I am actively working on a Python
-        implementation.
-      </p>
-    </section>
-  </section>
+  <Project
+    name="Blackjack"
+    href="https://github.com/DemetriusSemanko/Blackjack"
+    desc="I tried my best to recreate the game of blackjack. While I originally
+          took a crack at it in Java, I am actively working on a Python
+          implementation."
+  />
 </BaseLayout>

@@ -1,0 +1,13 @@
+---
+const { name, href, desc } = Astro.props;
+---
+<section class="projects">
+  <section>
+    <a {href}>
+      <h2>{name}</h2>
+    </a>
+    <p>
+      {desc}
+    </p>
+  </section>
+</section>
