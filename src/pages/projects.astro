@@ -3,26 +3,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Projects";
 ---
 <BaseLayout {pageTitle}>
-<p>
-        My projects are hosted on GitHub. For a VCS, I started with git (using
-        GitHub Desktop 💩). I transitioned to interacting with git solely
-        through the command line. I won't pretend I know how to use git like
-        crazy. I've since been introduced to (and really enjoy) jujutsu
-        (hereafter referred to as "jj").
-</p>
+  <p>
+    My projects are hosted on GitHub. For a VCS, I started with git (using
+    GitHub Desktop 💩). I transitioned to interacting with git solely through
+    the command line. I won't pretend I know how to use git like crazy. I've
+    since been introduced to (and really enjoy) jujutsu (hereafter referred to
+    as "jj").
+  </p>
 
-<section class="projects">
-        <section>
-          <a href="https://github.com/DemetriusSemanko/Blackjack">
-          <h2>Blackjack Game</h2>
-          </a>
-          <p>
-            Creating classes to represent individual cards, decks, and players,
-            I used Java to create the game of Blackjack. The user plays through
-            only a terminal. No other players may participate, and a dealer
-            automatically plays based on conventional casino rules. I want to
-            recreate this attempt with both text- and GUI-based interaction.
-          </p>
-        </section>
-</section>
+  <section class="projects">
+    <section>
+      <a href="https://github.com/DemetriusSemanko/Blackjack">
+        <h2>Blackjack Game</h2>
+      </a>
+      <p>
+        I tried my best to recreate the game of blackjack. While I originally
+        took a crack at it in Java, I am actively working on a Python
+        implementation.
+      </p>
+    </section>
+  </section>
 </BaseLayout>
