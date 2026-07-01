@@ -2,7 +2,7 @@
 layout: ../../../layouts/BlogPostLayout.astro
 title: "Duck Day 2026"
 pubDate: 2026-03-03
-description: "A detailing of WCUPAs Duck Day."
+description: "A detailing of WCUPAs Duck Day"
 author: "Demetrius"
 ---
 
