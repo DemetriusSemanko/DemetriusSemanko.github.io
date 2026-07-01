@@ -69,6 +69,7 @@ footer {
 }
 
 * > h2 {
+  margin-bottom: 16px;
   width: max-content;
   & + section {
     border: var(--accent) 1.5pt solid;
