@@ -1,6 +1,24 @@
 ---
 const { name, href, desc } = Astro.props;
 ---
+<style>
+  h2 {
+    border: none;
+    padding-left: 10px;
+  }
+
+  section:not(:first-child) {
+    border: var(--accent) 1.5pt solid;
+    border-radius: 10px;
+    margin-top: 16pt;
+    padding: 5px;
+  }
+
+  p {
+    padding: 10px;
+  }
+</style>
+
 <section class="projects">
   <section>
     <a {href}>

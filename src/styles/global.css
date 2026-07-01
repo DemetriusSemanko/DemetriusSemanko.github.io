@@ -131,20 +131,3 @@ nav {
     }
   }
 }
-
-.projects {
-  h2 {
-    border: none;
-  }
-
-  & > section {
-    border: var(--accent) 1.5pt solid;
-    border-radius: 10px;
-    margin-top: 16pt;
-    padding: 5px;
-  }
-
-  p {
-    padding: 10px;
-  }
-}
