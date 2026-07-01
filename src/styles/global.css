@@ -148,25 +148,3 @@ nav {
     padding: 10px;
   }
 }
-
-.article-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.date-posted {
-  display: grid;
-  font-weight: bold;
-  justify-content: end;
-}
-
-.author {
-  font-style: italic;
-}
-
-article {
-  border: solid var(--accent);
-  border-left-style: none;
-  border-right-style: none;
-  padding-bottom: 1em;
-}
