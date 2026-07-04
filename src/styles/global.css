@@ -39,10 +39,6 @@ html {
   scrollbar-gutter: stable;
 }
 
-header {
-  padding-top: 2em;
-}
-
 body {
   background-color: var(--body);
   border-radius: 0 0 10px 10px;
