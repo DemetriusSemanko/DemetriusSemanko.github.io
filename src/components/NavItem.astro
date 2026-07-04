@@ -7,6 +7,45 @@ const isActive = href === "/"
   ? Astro.url.pathname === "/"
   : Astro.url.pathname.startsWith(href);
 ---
+<style>
+  a {
+    background-color: var(--primary);
+    border: var(--shadow) 1.5pt solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 4px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration: none;
+    &.titular-navbar-tab {
+      background-color: var(--secondary);
+      color: var(--text);
+    }
+  }
+
+  a {
+    box-shadow: 0px 2.5px 2.5px 0.25px var(--shadow);
+    padding-left: 10px;
+    padding-right: 10px;
+    &.titular-navbar-tab {
+      box-shadow: 0px 2.5px 2.5px 0.25px inset var(--shadow);
+    }
+  }
+
+  @media screen and (min-width: 965px) {
+    /* Large screen styles */
+    a {
+      box-shadow: 2px 0px 5px 0.25px var(--shadow);
+      padding-left: 20px;
+      padding-right: 15px;
+      width: max-content;
+      &.titular-navbar-tab {
+        box-shadow: -2px 0 5px 0.25px inset var(--shadow);
+      }
+    }
+  }
+</style>
 <a
   {href}
   class={isActive ? "titular-navbar-tab" : undefined}

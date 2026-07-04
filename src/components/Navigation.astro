@@ -1,6 +1,32 @@
 ---
 import NavItem from "./NavItem.astro";
 ---
+<style>
+  nav {
+    /* Common styles */
+    display: flex;
+    width: 100%;
+  }
+
+  nav {
+    /* Small screen styles */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  @media screen and (min-width: 965px) {
+    /* Large screen styles */
+    nav {
+      align-items: unset;
+      flex-direction: column;
+      justify-content: unset;
+      left: -15px;
+      position: fixed;
+      z-index: -1;
+    }
+  }
+</style>
 <nav>
   <NavItem href="/" label="Home" />
   <NavItem href="/about" label="About" />
