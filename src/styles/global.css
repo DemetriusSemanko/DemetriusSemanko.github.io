@@ -54,10 +54,13 @@ h1 {
   margin-top: 0;
 }
 
-:is(header, main) > section:not(:first-child),
 footer,
 h3 {
   margin: 4em auto 2em;
+}
+
+h2 {
+  margin-top: 4em;
 }
 
 footer {
@@ -65,11 +68,11 @@ footer {
 }
 
 * > h2 {
-  margin-bottom: 16px;
+  margin-bottom: 1em;
   width: max-content;
-  & + section {
+  & + p {
     border: var(--accent) 1.5pt solid;
     border-style: solid none none none;
+    padding-top: 1em;
   }
 }
-
