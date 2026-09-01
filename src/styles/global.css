@@ -23,6 +23,9 @@
     --shadow: #0000;
   }
   :not(nav) > a {
+    &:not(:last-child) {
+      margin-right: 0.5em;
+    }
     color: lightskyblue;
     &:visited {
       color: #af238d;
