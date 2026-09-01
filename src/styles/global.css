@@ -19,12 +19,11 @@
     --secondary: #2f5639;
     --accent: #477b80;
     --body: #111;
-    /* --shadow: #ffffff67;*/
     --shadow: #0000;
+    font-weight: bold;
   }
   :not(nav) > a {
     color: lightskyblue;
-    font-weight: bold;
     &:visited {
       color: #de58be;
     }
