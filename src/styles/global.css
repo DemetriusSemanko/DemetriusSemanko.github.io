@@ -23,12 +23,13 @@
     --shadow: #0000;
   }
   :not(nav) > a {
+    color: lightskyblue;
+    font-weight: bold;
     &:not(:last-child) {
       margin-right: 0.5em;
     }
-    color: lightskyblue;
     &:visited {
-      color: #af238d;
+      color: #de58be;
     }
   }
 }
