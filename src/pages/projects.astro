@@ -3,6 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Project from "../components/Project.astro";
 const pageTitle = "Projects";
 ---
+
+<style>
+  #projects {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
 <BaseLayout {pageTitle}>
   <p>
     My projects are hosted on GitHub. For a VCS, I started with git (using
@@ -11,11 +18,22 @@ const pageTitle = "Projects";
     since been introduced to (and really enjoy) jujutsu (hereafter referred to
     as "jj").
   </p>
-  <Project
-    name="Blackjack"
-    href="https://github.com/DemetriusSemanko/Blackjack"
-    desc="I tried my best to recreate the game of blackjack. While I originally
+  <div id="projects">
+    <Project
+      name="Personal Website"
+      href="https://github.com/DemetriusSemanko/DemetriusSemanko.github.io"
+      desc="This project led to the very site you read from right now! I began with just HTML and CSS.
+    I quickly realized I needed some kind of SSG. Starting with Jekyll gave me some
+    idea of what to do. My friend eventually convinced me to use Astro. I have enjoyed working on this project.
+    I am hosting my code on both GitHub and Tangled. I eventually want to deploy my site entirely
+    from Tangled."
+    />
+    <Project
+      name="Blackjack"
+      href="https://github.com/DemetriusSemanko/Blackjack"
+      desc="I tried my best to recreate the game of blackjack. While I originally
           took a crack at it in Java, I am actively working on a Python
           implementation."
-  />
+    />
+  </div>
 </BaseLayout>
