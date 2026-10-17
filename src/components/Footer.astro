@@ -7,7 +7,7 @@ import Social from "./Social.astro";
     display: flex;
     flex-direction: column;
   }
-  section {
+  div {
     display: flex;
     flex-flow: row wrap;
     *:not(:last-child) {
@@ -16,14 +16,14 @@ import Social from "./Social.astro";
   }
 </style>
 <footer>
-  <section>
+  <div>
     <a href="mailto:demetrius@demsem.dev">Email</a>
     <Social platform="Witchsky" link="witchsky.app/profile/demsem.dev" />
     <Social platform="Tangled" link="tangled.org/demsem.dev" />
     <Social platform="GitHub" link="github.com/DemetriusSemanko" />
     <Social platform="LinkedIn" link="linkedin.com/in/demetrius-semanko/" />
-  </section>
-  <section>
+  </div>
+  <div>
     <span>&copy; 2026 Demetrius</span>
-  </section>
+  </div>
 </footer>
