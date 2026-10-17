@@ -10,13 +10,14 @@ const { name, href, desc } = Astro.props;
     flex-direction: column;
     padding: 1em;
     margin: 1em 0;
-    h2, p {
+    h2,
+    p {
       margin: 0;
     }
   }
 </style>
 
-  <section class="project" id={name}>
+<section class="project">
   <a {href}>
     <h2>{name}</h2>
   </a>
