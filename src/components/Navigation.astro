@@ -5,26 +5,11 @@ import NavItem from "./NavItem.astro";
   nav {
     /* Common styles */
     display: flex;
-    width: 100%;
-  }
-
-  nav {
-    /* Small screen styles */
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 5px;
-  }
-
-  @media screen and (min-width: 965px) {
-    /* Large screen styles */
-    nav {
-      align-items: unset;
-      flex-direction: column;
-      justify-content: unset;
-      left: -15px;
-      position: fixed;
-      z-index: -1;
-    }
+    gap: 1rem;
+    border-bottom: solid var(--accent);
+    padding: 0.5rem 0;
   }
 </style>
 <nav>

@@ -22,7 +22,7 @@
     --shadow: #0000;
     font-weight: bold;
   }
-  :not(nav) > a {
+  a {
     color: lightskyblue;
     &:visited {
       color: #de58be;

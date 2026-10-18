@@ -1,11 +1,30 @@
 ---
 import Navigation from "./Navigation.astro";
 ---
+
 <style>
   header {
-    padding-top: 2em;
+    padding-top: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  span {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1rem;
   }
 </style>
 <header>
+  <span
+    ><img
+      src="/favicon.ico"
+      alt="A black square with white text displaying 'DS'"
+    />demsem.dev</span
+  >
   <Navigation />
 </header>
