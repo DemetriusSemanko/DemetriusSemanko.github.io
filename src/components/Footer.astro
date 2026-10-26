@@ -7,19 +7,30 @@ import Social from "./Social.astro";
     display: flex;
     flex-direction: column;
   }
-  div {
+  #socials {
     display: flex;
     flex-flow: row wrap;
     gap: 1em;
   }
+  #copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
 </style>
 <footer>
-  <div>
+  <div id="socials">
     <a href="mailto:demetrius@demsem.dev">Email</a>
     <Social platform="Witchsky" link="witchsky.app/profile/demsem.dev" />
     <Social platform="Tangled" link="tangled.org/demsem.dev" />
     <Social platform="GitHub" link="github.com/DemetriusSemanko" />
     <Social platform="LinkedIn" link="linkedin.com/in/demetrius-semanko/" />
   </div>
-  <span>&copy; 2026 Demetrius</span>
+  <span style="font-style: italic;">
+    This site collects analytics with <a href="goatcounter.com">GoatCounter.</a>
+  </span>
+  <div id="copy">
+    <span>&copy; 2026 Demetrius</span>
+  </div>
 </footer>
