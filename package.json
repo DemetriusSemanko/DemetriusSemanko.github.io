@@ -1,21 +1,22 @@
 {
   "name": "demsem-dev-website",
-  "type": "module",
   "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fmt": "oxfmt"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^6.1.9"
+    "astro": "^7.4.2"
   },
   "devDependencies": {
-    "prettier-plugin-astro": "^0.14.1"
+    "oxfmt": "^0.74.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

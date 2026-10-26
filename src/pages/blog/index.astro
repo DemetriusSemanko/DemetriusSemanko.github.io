@@ -1,11 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
-const allPosts = Object.values(
-  import.meta.glob("./posts/*.md", { eager: true }),
-);
+const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
 const pageTitle = "Blog";
 ---
+
 <style>
   li {
     list-style-position: inside;
@@ -13,9 +12,8 @@ const pageTitle = "Blog";
 </style>
 <BaseLayout {pageTitle}>
   <p>
-    A blog may or may not help me in my life journey. I think it will help only
-    because articulating my thoughts and ideas has brought me clarity,
-    introspection, and reformation.
+    A blog may or may not help me in my life journey. I think it will help only because articulating
+    my thoughts and ideas has brought me clarity, introspection, and reformation.
   </p>
 
   {allPosts.map((post: any) => (

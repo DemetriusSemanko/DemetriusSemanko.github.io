@@ -10,7 +10,7 @@ When programming, we try to develop _something_, but we also develop _problems_.
 We try our best to fix the problem, but we find ourselves struggling. Who or
 what can we turn to?
 
-__A duck! 🦆__
+**A duck! 🦆**
 
 We can talk to a duck, usually a rubber duck, (or maybe even a real duck!) to
 vocalize the issue we encounter and how we want to address it. The simple act of
