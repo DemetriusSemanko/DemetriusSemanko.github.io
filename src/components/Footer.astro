@@ -1,5 +1,22 @@
 ---
 import Social from "./Social.astro";
+
+import { execSync } from "child_process";
+import path from "path";
+
+const { pathname } = Astro.url;
+
+let relativePath =
+  pathname === "/" ? "index.astro" : `${pathname.replace(/\/$/, "")}.??*`;
+const fileSystemPath = path.join(process.cwd(), "src", "pages", relativePath);
+
+const fileHash = execSync(`git log -1 --format="%h" -- "${fileSystemPath}"`)
+  .toString()
+  .trim();
+const ghLink = `https://github.com/DemetriusSemanko/DemetriusSemanko.github.io/commit/${fileHash}`;
+
+const latestHash = execSync(`git log -1 --format="%h"`);
+const latestGhLink = `https://github.com/DemetriusSemanko/DemetriusSemanko.github.io/commit/${latestHash}`;
 ---
 
 <style>
@@ -12,11 +29,16 @@ import Social from "./Social.astro";
     flex-flow: row wrap;
     gap: 1em;
   }
+  #version {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
   #copy {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1em;
   }
 </style>
 <footer>
@@ -28,8 +50,23 @@ import Social from "./Social.astro";
     <Social platform="LinkedIn" link="linkedin.com/in/demetrius-semanko/" />
   </div>
   <span style="font-style: italic;">
-    This site collects analytics with <a href="https://goatcounter.com">GoatCounter</a>.
+    This site collects analytics with{" "}
+    <a href="https://goatcounter.com">GoatCounter</a>.
   </span>
+  <div id="version">
+    <span>
+      Latest site commit:{" "}
+      <a href={latestGhLink} target="_blank">
+        {latestHash}
+      </a>
+    </span>
+    <span>
+      Latest page commit:{" "}
+      <a href={ghLink} target="_blank">
+        {fileHash}
+      </a>
+    </span>
+  </div>
   <div id="copy">
     <span>&copy; 2026 Demetrius</span>
   </div>
