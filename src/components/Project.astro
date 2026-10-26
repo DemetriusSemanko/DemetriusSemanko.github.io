@@ -3,11 +3,11 @@ const { name, href, desc } = Astro.props;
 ---
 
 <style>
-  .project {
+  section {
     border: var(--accent) 1.5pt solid;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     padding: 1em;
     margin: 1em 0;
     h2,
@@ -17,7 +17,7 @@ const { name, href, desc } = Astro.props;
   }
 </style>
 
-<section class="project">
+<section>
   <a {href}>
     <h2>{name}</h2>
   </a>

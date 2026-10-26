@@ -10,9 +10,7 @@ import Social from "./Social.astro";
   div {
     display: flex;
     flex-flow: row wrap;
-    *:not(:last-child) {
-      margin-right: 1em;
-    }
+    gap: 1em;
   }
 </style>
 <footer>
@@ -23,7 +21,5 @@ import Social from "./Social.astro";
     <Social platform="GitHub" link="github.com/DemetriusSemanko" />
     <Social platform="LinkedIn" link="linkedin.com/in/demetrius-semanko/" />
   </div>
-  <div>
-    <span>&copy; 2026 Demetrius</span>
-  </div>
+  <span>&copy; 2026 Demetrius</span>
 </footer>
